@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles - Valero Dreams </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="site-title">Valero Dreams <span class="accent">+</span></h1>
+            <nav class="main-nav">
+                <a href="index.html">INICIO</a>
+                <div class="nav-dropdown">
+                    <span class="nav-link">CATEGORÍAS</span>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Acción</a>
+                        <a href="#" class="dropdown-item">Comedia</a>
+                        <a href="#" class="dropdown-item">Drama</a>
+                        <a href="#" class="dropdown-item">Ciencia Ficción</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Todas</a>
+                    </div>
+                </div>
+                <a href="search.html">BÚSQUEDA</a>
+            </nav>
+            <div class="user-menu">
+                <div class="user-trigger">
+                    <span class="user-name">Hola Maite! </span>
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/image_ccdd5962.jpeg" alt="Avatar"
+                        class="user-avatar">
+                </div>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Configuración</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item text-danger">Cerrar sesión</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="movie-details" style="padding: 40px 0; display: flex; gap: 40px; flex-wrap: wrap;">
+            <img src="https://lumiere-a.akamaihd.net/v1/images/p_avatarthewayofwater_199_v2_1ac9b808.jpeg" alt="Poster"
+                style="width: 300px; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+            <div class="details-content" style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 3rem; margin-top: 0;">Avatar: El Sentido del Agua</h2>
+                <div class="meta" style="color: #ccc; margin-bottom: 20px;">
+                    <span>2022</span> • <span>3h 12m</span> • <span>Ciencia Ficción, Acción</span>
+                </div>
+                <p style="font-size: 1.1rem; line-height: 1.6; color: #e2e8f0;">
+                    Jake Sully vive con su nueva familia en el planeta Pandora. Cuando una amenaza conocida regresa,
+                    Jake debe trabajar con Neytiri y el ejército de la raza Na'vi para proteger su planeta.
+                </p>
+                <div class="actions" style="margin-top: 30px;">
+                    <button class="primary-button">VER AHORA</button>
+                    <button class="primary-button"
+                        style="background: rgba(255,255,255,0.1); margin-left: 10px;">TRÁILER</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Sección Similares -->
+    <h2 class="section-title">Similares</h2>
+    <section class="carousel-container" id="recommended-carousel">
+        <button class="carousel-btn prev" onclick="scrollCarousel('recommended-track', -1)">&#10094;</button>
+        <div class="carousel-track-container">
+            <div class="carousel-track" id="recommended-track">
+                <!-- JS inyectará películas aquí -->
+            </div>
+        </div>
+        <button class="carousel-btn next" onclick="scrollCarousel('recommended-track', 1)">&#10095;</button>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Centro San Valero</p>
+            <p>SARA MARCO, SERGIO GOMEZ , AMALIO OSA · Curso: 1SI</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
