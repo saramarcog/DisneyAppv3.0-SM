@@ -5,7 +5,32 @@ let movies = []; // Will be fetched from the backend
 const BACKEND_URLS = [
     'http://localhost:3000',
     'https://cfzqbt9r-3000.uks1.devtunnels.ms'
+
 ];
+async function fetchMovies() {
+    // Usamos localhost que es donde corre tu backend
+    const url = 'http://localhost:3000/api/movies';
+    try {
+        const res = await fetch(url);
+        if (!res.ok) throw new Error('Error en la respuesta del servidor');
+
+        const data = await res.json();
+
+        // Si tu back devuelve { movies: [...] }
+        if (data && data.movies) {
+            movies = data.movies;
+        }
+        // Si tu back devuelve el array directo [...]
+        else if (Array.isArray(data)) {
+            movies = data;
+        }
+
+        console.log('Películas cargadas:', movies);
+    } catch (e) {
+        console.error('Error cargando pelis, mi amol:', e);
+        movies = []; // Evita que la app se rompa si el back está apagado
+    }
+}
 // Estado de los carruseles (posición actual de scroll)
 const carouselState = {
     'recommended-track': 0,
